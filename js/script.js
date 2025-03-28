@@ -57,7 +57,7 @@ employees.addEventListener('click', (e) => {
     if (e.target.tagName === 'BUTTON') {
         if (confirm('Are you sure you want to delete this employee?')) {
             let row = e.target.parentElement.parentElement;
-            employees.deleteRow(row.rowIndex - 1);
+            employees.deleteRow(row.rowIndex);
             count--;
             document.getElementById('empCount').textContent = `(${count})`;
         }
